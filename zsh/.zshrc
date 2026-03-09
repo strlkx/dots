@@ -70,7 +70,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,9 +112,6 @@ bindkey '^ ' autosuggest-accept
 # Some aliases
 alias ll='eza -alh'
 alias bcat='batcat'
-alias nvconf='cd ~/.config/nvim'
-alias nv='nvim'
-alias alconf='cd ~/.config/alacritty'
 
 # Init zoxide
 eval "$(zoxide init bash)"
@@ -137,9 +134,6 @@ function mkcd() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Brew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Starship prompt
 eval "$(starship init zsh)"
