@@ -1,6 +1,6 @@
 alias ll='eza -alh'
 alias la='eza -A'
-alias l='eza -CF'
+alias l='eza -l'
 alias nvconf='cd ~/.config/nvim'
 alias nv='nvim '
 alias ..='cd ..'
@@ -9,3 +9,13 @@ alias gst='git status'
 alias gad='git add'
 alias gct='git commit'
 alias webcreate='touch index.html script.js && mkdir -p /assets/img && mkdir css && touch css/style.css'
+
+# APT
+alias agu='sudo apt update'
+alias agug='sudo apt upgrade'
+alias agi='sudo apt install'
+alias are='sudo apt autoremove'
+alias alu='sudo apt list --upgradable'
+
+# FLATPAK
+alias fpu='flatpak update'

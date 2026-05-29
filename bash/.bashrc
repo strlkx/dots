@@ -90,8 +90,6 @@ fi
 alias ll='eza -alh'
 alias la='eza -A'
 alias l='eza -CF'
-alias nvconf='cd ~/.config/nvim'
-alias nv='nvim '
 alias ..='cd ..'
 alias bat='batcat '
 alias gst='git status'
@@ -138,7 +136,7 @@ source /usr/share/doc/fzf/examples/key-bindings.bash
 
 # Run ls after entering a directory.
 [[ $- == *i* ]] && function cd {
-  builtin cd "$@" && ls -Ftr1
+  builtin cd "$@" && ll
 }
 
 # Create dir and cd into it.
@@ -146,3 +144,10 @@ function mkcd() {
   mkdir -p "${1}"
   cd "${1}"
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# opencode
+export PATH=/home/gl/.opencode/bin:$PATH
